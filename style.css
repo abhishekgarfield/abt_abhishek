@@ -314,14 +314,14 @@ span {
   display: flex;
   flex-direction: row;
   text-align: left;
-  color: white;
+  color: var( white);
 }
 .techused span{
   display: flex;
   flex: 0 0 30%;
   margin: 0rem;
   
-  color: #22cf91;
+  color: #0cea99;
 }
 .livelink ,.functionalities{
   display: flex;
@@ -332,24 +332,18 @@ span {
 }
 .livelink span ,.functionalities span{
   display: flex;
-  flex: 0 0 30%;  color: #22cf91;
+  flex: 0 0 30%;  color: #0af19c;
   font-weight: 500;
   margin: 0rem;
 }
 .livelink a{
-  color: rgb(8, 96, 178);
+  color: rgb(14, 199, 216);
   display: flex;
   align-items: center;
 }
 .flip-info h4{
   font-size: 20px;
-  color: var( --text-color);
-  border-bottom: 1px solid white;
   margin-bottom: 10px;
-}
-.flip-info :nth-of-type(div)
-{
-  background-color: #22cf91;
 }
 
 
@@ -379,13 +373,13 @@ span {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #c85080;
+  background-color: #1e69cb;
   color: white;
   transform: rotateY(180deg);
 }
@@ -484,6 +478,9 @@ form textarea {
   header {
     padding: 18px 4%;
   }
+  .portfolio-content .portfolio-img ,.certification-content .certification-img{
+    flex: 0 0 49%;
+   }
   section {
     padding: 50px 4%;
   }
@@ -502,6 +499,12 @@ form textarea {
   header {
     padding: 11px 4%;
   }
+  .portfolio-content,.certification-content{
+    justify-content: center;
+  }
+  .portfolio-content .portfolio-img ,.certification-content .certification-img{
+    flex: 0 0 45%;
+   }
   #menu-icon {
     display: initial;
     color: var(--text-color);
@@ -569,6 +572,15 @@ form textarea {
     margin-left: 25%;
   }
 }
+
+@media (max-width: 768px) {
+  .portfolio-content .portfolio-img ,.certification-content .certification-img{
+    flex: 0 0 80%;
+   }
+   .portfolio-content,.certification-content{
+    justify-content: center;
+  }
+}
 @media (max-width: 340px) {
   :root {
     --big-font: 1.7rem;
@@ -584,8 +596,12 @@ form textarea {
   .information .info-box span {
     font-size: 1rem;
   }
-  .portfolio-content {
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  .portfolio-content,.certification-content{
+    justify-content: center;
+  }
+  .portfolio-content .portfolio-img ,.certification-content .certification-img{
+   flex: 0 0 80%;
+   margin: auto;
   }
   .contact-form form{
     width: 300px;

@@ -27,3 +27,14 @@
             document.body.classList.remove('active');
         }
     }
+
+    let flipcard= document.querySelectorAll(".flip-info");
+    for(var i=0;i<flipcard.length;i++)
+    {
+        if((i+1)%2==0)
+        {
+            console.log("here")
+            flipcard[i].style.backgroundColor="yellow"
+            flipcard[i].style.color="black"
+        }
+    }
