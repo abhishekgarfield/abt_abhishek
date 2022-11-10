@@ -600,7 +600,7 @@ form textarea {
 
 @media (max-width: 768px) {
   .portfolio-content .portfolio-img ,.certification-content .certification-img{
-    flex: 0 0 80%;
+    flex: 0 0 90%;
    }
    .portfolio-content,.certification-content{
     justify-content: center;
@@ -625,7 +625,7 @@ form textarea {
     justify-content: center;
   }
   .portfolio-content .portfolio-img ,.certification-content .certification-img{
-   flex: 0 0 80%;
+   flex: 0 0 90%;
    margin: auto;
   }
   .contact-form form{
