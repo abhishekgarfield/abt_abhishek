@@ -504,11 +504,12 @@
             <span>Connect With Me</span>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                <input type="button" value="Send" class="contact-button">
+            <form action="https://sheetdb.io/api/v1/c3tm9c21x4u35" method="post" id="sheetdb-form">
+                <input type="text" placeholder="Your Name" required name="data[name]" >
+                <input type="email" name="data[email]"  required  placeholder="Your Email">
+                <textarea  cols="30" name="data[message]" required rows="10" placeholder="Write Message Here..."></textarea>
+                <input type="submit" value="Send" class="contact-button" name="submit">
+                <p></p>
             </form>
         </div>
     </section>

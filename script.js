@@ -2,6 +2,7 @@
     let header = document.querySelector('header');
     let menu = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
+
      
      
     window.addEventListener('scroll', () => {
@@ -9,8 +10,6 @@
         let skills= document.querySelector(".skills");
         let skillsTop=skills.getBoundingClientRect().top;
         let windowHeight=window.innerHeight;
-        console.log(windowHeight);
-        console.log(`${skillsTop} skills`)
         if(skillsTop-windowHeight<-350)
         {
             var percent=document.querySelectorAll(".percent-bar");
@@ -18,6 +17,30 @@
             { if( percent[i].classList.contains("html-bar"))
             {
                 percent[i].style.animationName="percent"
+            }
+            else if(percent[i].classList.contains("css-bar"))
+            {
+                percent[i].style.animationName="percent1"
+            }
+            else if(percent[i].classList.contains("js-bar"))
+            {
+                percent[i].style.animationName="percent2"
+            }
+            else if(percent[i].classList.contains("react-bar"))
+            {
+                percent[i].style.animationName="percent3"
+            }
+            else if(percent[i].classList.contains("sql-bar"))
+            {
+                percent[i].style.animationName="percent4"
+            }
+            else if(percent[i].classList.contains("mongo-bar"))
+            {
+                percent[i].style.animationName="percent5"
+            }
+            else if(percent[i].classList.contains("node-bar"))
+            {
+                percent[i].style.animationName="percent6"
             }
                 percent[i].classList.add("activebar");
             }
@@ -55,4 +78,28 @@
         }
     }
 
+    var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            var hrl=new FormData(form)
+            console.log(hrl) 
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(form),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+           if(html.created==1)
+           {
+           var hio= document.querySelectorAll("form#sheetdb-form :nth-child(-n+3)")
+            for(var i=0;i<hio.length;i++)
+            {
+                hio[i].value="";
+            }
+            window.alert("message sent !")
+           }
+
+          });
+        });
   
