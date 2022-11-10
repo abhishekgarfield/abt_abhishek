@@ -222,6 +222,12 @@ span {
 .html-bar {
   width: 94%;
 }
+.sql-bar{
+  width: 70%;
+}
+.mongo-bar{
+  width:50%
+}
 .css-bar {
   width: 84%;
 }
@@ -230,6 +236,9 @@ span {
 }
 .react-bar {
   width: 80%;
+}
+.node-bar{
+  width: 60%;
 }
 .services-content {
   display: grid;
@@ -278,28 +287,68 @@ span {
   color: #8b8a8f;
 }
 .portfolio-content ,.certification-content{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-  gap: 1rem;
-  margin-top: 2rem;
+  display: flex;
+ 
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-between;
+  position: relative;
+  
 }
-.portfolio-img,.certification-img {
-  overflow: hidden;
+.portfolio-img , .certification-img {
+  display: flex;
+  height: auto;
+ min-height: 235px;
+  flex:0 0 33%;
   border-radius: 0.5rem;
+  margin-top: 1rem;
+  position: relative;
+  perspective: 1000px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.certification-img {
+  min-height: 280px;
+  overflow: hidden;
+}
+.mobile{
+  display: flex;
+  min-height: 700px;
 }
 .portfolio-img.mobile img{
-  height: 90%;
+  display: flex;
   margin: auto;
 }
-.portfolio-img img ,.certification-img img{
+.portfolio-img img , .certification-img img{
   width: 100%;
   height: 100%;
+  border-radius: 5px;
   display: block;
+  background-color: #bbb;
+  backface-visibility: hidden;
+  position: absolute;
 }
-.portfolio-img img:hover ,.certification-img img:hover{
+.portfolio-img .flip-info{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #4ec5d7;
+  color: white;
+  transform: rotateY(180deg);
+}
+.certification-img img:hover{
   transform: scale(1.1);
   transition: 1s;
   cursor: pointer;
+}
+.portfolio-img:hover{
+  transform: rotateY(180deg);
 }
 .contact-form {
   display: grid;
@@ -364,6 +413,11 @@ form textarea {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: 0.3s all;
+}
+.footer-social a i:hover{
+  transform: scale(1.1);
+  
 }
 .copyright {
   padding: 20px;
