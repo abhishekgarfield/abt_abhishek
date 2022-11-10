@@ -6,6 +6,22 @@
      
     window.addEventListener('scroll', () => {
         header.classList.toggle('shadow', window.scrollY > 0);
+        let skills= document.querySelector(".skills");
+        let skillsTop=skills.getBoundingClientRect().top;
+        let windowHeight=window.innerHeight;
+        console.log(windowHeight);
+        console.log(`${skillsTop} skills`)
+        if(skillsTop-windowHeight<-350)
+        {
+            var percent=document.querySelectorAll(".percent-bar");
+            for(var i=0;i<percent.length;i++)
+            { if( percent[i].classList.contains("html-bar"))
+            {
+                percent[i].style.animationName="percent"
+            }
+                percent[i].classList.add("activebar");
+            }
+        }
     });
      
     menu.onclick = () => {
@@ -38,3 +54,5 @@
             flipcard[i].style.color="black"
         }
     }
+
+  

@@ -219,26 +219,74 @@ span {
   background: var(--main-color);
   border-radius: 0.5rem;
 }
+@keyframes percent{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:94%;}
+}
+@keyframes percent1{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:84%;}
+}
+@keyframes percent2{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:74%;}
+}
+@keyframes percent3{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:80%;}
+}
+@keyframes percent4{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:70%;}
+}
+@keyframes percent5{
+  0%{width: 0%;}
+  50%{width: 25%;}
+  100%{width:50%;}
+}
+@keyframes percent6{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:60%;}
+}
+.activebar
+{
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  transition: 0.2s all;
+  animation-fill-mode: forwards;
+}
 .html-bar {
-  width: 94%;
+  transition: 3s all;
 }
 .sql-bar{
   width: 70%;
+  animation-name: percent4;
 }
 .mongo-bar{
-  width:50%
+  width:50%;
+  animation-name: percent5;
 }
 .css-bar {
-  width: 84%;
+  animation-name: percent1;
 }
 .js-bar {
   width: 74%;
+  animation-name: percent2;
 }
 .react-bar {
   width: 80%;
+  animation-name: percent3;
 }
 .node-bar{
   width: 60%;
+  animation-name: percent6;
 }
 .services-content {
   display: grid;
@@ -250,6 +298,7 @@ span {
 .services-box {
   padding: 20px;
   width: 260px;
+  transition: 0.1s all;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,6 +309,7 @@ span {
 }
 .services-box:hover{
  background-color: #02225a;
+ 
 }
 
 .services-box h3 {
