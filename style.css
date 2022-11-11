@@ -605,6 +605,15 @@ form textarea {
    .portfolio-content,.certification-content{
     justify-content: center;
   }
+ 
+}
+@media (max-width: 480px){
+  .portfolio-img .flip-info {
+    font-size: 13px;
+  }
+  .portfolio-img .flip-info span{
+    font-size: 13px;
+  }
 }
 @media (max-width: 340px) {
   :root {
