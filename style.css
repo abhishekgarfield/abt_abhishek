@@ -256,8 +256,8 @@ span {
 }
 .activebar
 {
-  animation-timing-function: linear;
-  animation-duration: 3s;
+  animation-timing-function:linear;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   transition: 0.2s all;
   animation-fill-mode: forwards;
