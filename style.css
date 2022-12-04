@@ -252,6 +252,21 @@ span {
 @keyframes percent6{
   0%{width: 0%;}
   50%{width: 30%;}
+  100%{width:70%;}
+}
+@keyframes percent7{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:60%;}
+}
+@keyframes percent8{
+  0%{width: 0%;}
+  50%{width: 30%;}
+  100%{width:70%;}
+}
+@keyframes percent9{
+  0%{width: 0%;}
+  50%{width: 30%;}
   100%{width:60%;}
 }
 .activebar

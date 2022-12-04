@@ -40,7 +40,19 @@
             }
             else if(percent[i].classList.contains("node-bar"))
             {
+                percent[i].style.animationName="percent7"
+            }
+            else if(percent[i].classList.contains("ruby-bar"))
+            {
+                percent[i].style.animationName="percent8"
+            }
+            else if(percent[i].classList.contains("express-bar"))
+            {
                 percent[i].style.animationName="percent6"
+            }
+            else if(percent[i].classList.contains("ruby-on-rails-bar"))
+            {
+                percent[i].style.animationName="percent9"
             }
                 percent[i].classList.add("activebar");
             }
