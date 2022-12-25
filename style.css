@@ -329,7 +329,7 @@ span {
 .portfolio-content ,.certification-content{
   display: flex;
  
- flex-direction: row;
+ flex-direction: row; 
  flex-wrap: wrap;
  justify-content: space-between;
   position: relative;
