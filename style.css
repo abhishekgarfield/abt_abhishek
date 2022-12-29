@@ -337,7 +337,7 @@ span {
 }
 .portfolio-img , .certification-img {
   display: flex;
-  height: auto;
+  height: auto;   
  min-height: 235px;
   flex:0 0 33%;
   border-radius: 0.5rem;
